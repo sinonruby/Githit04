@@ -1,0 +1,978 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto.com CEO Buys AI.com For $70 Million | Tech News</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+        }
+        
+        :root {
+            --primary: #121212;
+            --secondary: #8a2be2;
+            --accent: #00d8ff;
+            --text: #333333;
+            --light-bg: #f8f9fa;
+            --card-bg: #ffffff;
+            --border: #eaeaea;
+            --crypto: #00d8ff;
+            --ai: #ff6b6b;
+            --transition: all 0.3s ease;
+        }
+        
+        body {
+            background-color: #f5f7fa;
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        header {
+            background-color: var(--primary);
+            color: white;
+            padding: 15px 0;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 700;
+            font-size: 1.8rem;
+        }
+        
+        .logo i {
+            color: var(--crypto);
+        }
+        
+        .logo span {
+            color: var(--accent);
+        }
+        
+        .site-tagline {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            margin-left: 10px;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: var(--transition);
+            padding: 5px 0;
+            position: relative;
+        }
+        
+        nav a:hover {
+            color: var(--crypto);
+        }
+        
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--crypto);
+            transition: var(--transition);
+        }
+        
+        nav a:hover::after {
+            width: 100%;
+        }
+        
+        .breaking-news {
+            background: linear-gradient(90deg, var(--crypto), var(--secondary));
+            color: white;
+            padding: 10px 0;
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .breaking-news span {
+            background-color: rgba(0, 0, 0, 0.2);
+            padding: 5px 10px;
+            border-radius: 4px;
+            margin: 0 10px;
+        }
+        
+        /* Main Content */
+        main {
+            padding: 40px 0;
+        }
+        
+        .article-header {
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--border);
+        }
+        
+        .category-tag {
+            display: inline-block;
+            background-color: var(--crypto);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .article-title {
+            font-size: 3rem;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+        
+        .article-meta {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+        
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .author-img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: var(--light-bg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-right: 10px;
+        }
+        
+        .featured-image {
+            width: 100%;
+            height: 500px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            border-radius: 10px;
+            margin: 40px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .featured-image::before {
+            content: '';
+            position: absolute;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);
+            animation: pulse 8s infinite alternate;
+        }
+        
+        @keyframes pulse {
+            0% { transform: translate(-50%, -50%) scale(0.8); }
+            100% { transform: translate(-50%, -50%) scale(1.2); }
+        }
+        
+        .domain-display {
+            font-size: 6rem;
+            font-weight: 900;
+            margin-bottom: 20px;
+            z-index: 2;
+            text-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        .domain-display .ai {
+            color: var(--ai);
+        }
+        
+        .domain-display .com {
+            color: white;
+        }
+        
+        .price-tag {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 15px 30px;
+            border-radius: 10px;
+            font-size: 2rem;
+            font-weight: 700;
+            z-index: 2;
+            border: 2px solid var(--crypto);
+        }
+        
+        .article-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+        }
+        
+        .content-main {
+            background-color: var(--card-bg);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .content-main p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+        
+        .content-main h2 {
+            font-size: 1.8rem;
+            margin: 30px 0 15px;
+            color: var(--primary);
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--border);
+        }
+        
+        .quote {
+            background-color: var(--light-bg);
+            border-left: 5px solid var(--crypto);
+            padding: 25px;
+            margin: 30px 0;
+            font-style: italic;
+            font-size: 1.2rem;
+            border-radius: 0 10px 10px 0;
+        }
+        
+        .quote-author {
+            display: block;
+            margin-top: 10px;
+            font-weight: 600;
+            color: var(--primary);
+        }
+        
+        .key-facts {
+            background-color: var(--light-bg);
+            padding: 25px;
+            border-radius: 10px;
+            margin: 30px 0;
+        }
+        
+        .key-facts h3 {
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+        
+        .key-facts ul {
+            list-style-type: none;
+        }
+        
+        .key-facts li {
+            padding: 10px 0;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .key-facts li:last-child {
+            border-bottom: none;
+        }
+        
+        .key-facts i {
+            color: var(--crypto);
+        }
+        
+        .side-content {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+        
+        .side-card {
+            background-color: var(--card-bg);
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .side-card h3 {
+            color: var(--primary);
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--border);
+        }
+        
+        .ceo-profile {
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .ceo-img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background-color: var(--light-bg);
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: var(--primary);
+            border: 3px solid var(--crypto);
+        }
+        
+        .ceo-name {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+        
+        .ceo-title {
+            color: var(--crypto);
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+        
+        .related-article {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--border);
+        }
+        
+        .related-article:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+        
+        .related-img {
+            width: 80px;
+            height: 80px;
+            border-radius: 8px;
+            background-color: var(--light-bg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: var(--primary);
+            flex-shrink: 0;
+        }
+        
+        .related-content h4 {
+            margin-bottom: 8px;
+            font-size: 1rem;
+        }
+        
+        .related-content p {
+            font-size: 0.9rem;
+            color: #666;
+        }
+        
+        .impact-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 50px 0;
+        }
+        
+        .impact-card {
+            background-color: var(--card-bg);
+            padding: 25px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+        }
+        
+        .impact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .impact-icon {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background-color: var(--light-bg);
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+        }
+        
+        .impact-card:nth-child(1) .impact-icon {
+            color: var(--crypto);
+            background-color: rgba(0, 216, 255, 0.1);
+        }
+        
+        .impact-card:nth-child(2) .impact-icon {
+            color: var(--ai);
+            background-color: rgba(255, 107, 107, 0.1);
+        }
+        
+        .impact-card:nth-child(3) .impact-icon {
+            color: var(--secondary);
+            background-color: rgba(138, 43, 226, 0.1);
+        }
+        
+        .impact-card h3 {
+            margin-bottom: 10px;
+            color: var(--primary);
+        }
+        
+        .social-share {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 40px 0;
+        }
+        
+        .social-btn {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+            transition: var(--transition);
+            cursor: pointer;
+        }
+        
+        .social-btn.twitter {
+            background-color: #1da1f2;
+        }
+        
+        .social-btn.facebook {
+            background-color: #1877f2;
+        }
+        
+        .social-btn.linkedin {
+            background-color: #0a66c2;
+        }
+        
+        .social-btn:hover {
+            transform: translateY(-5px);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--primary);
+            color: white;
+            padding: 60px 0 30px;
+            margin-top: 60px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-column h3 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            color: white;
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column ul li {
+            margin-bottom: 12px;
+        }
+        
+        .footer-column a {
+            color: #b0b7c3;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .footer-column a:hover {
+            color: var(--crypto);
+        }
+        
+        .newsletter {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        
+        .newsletter input {
+            width: 100%;
+            padding: 12px;
+            border-radius: 5px;
+            border: none;
+            margin-bottom: 10px;
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+        
+        .newsletter button {
+            width: 100%;
+            padding: 12px;
+            border-radius: 5px;
+            border: none;
+            background-color: var(--crypto);
+            color: white;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .newsletter button:hover {
+            background-color: var(--secondary);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #b0b7c3;
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive */
+        @media (max-width: 992px) {
+            .article-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .article-title {
+                font-size: 2.5rem;
+            }
+            
+            .domain-display {
+                font-size: 4rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+            }
+            
+            .article-title {
+                font-size: 2rem;
+            }
+            
+            .featured-image {
+                height: 400px;
+            }
+            
+            .domain-display {
+                font-size: 3rem;
+            }
+            
+            .price-tag {
+                font-size: 1.5rem;
+                padding: 10px 20px;
+            }
+        }
+        
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.8s ease forwards;
+        }
+        
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <i class="fas fa-newspaper"></i>
+                <div>TECH<span>NEWS</span></div>
+                <div class="site-tagline">Tomorrow's Technology Today</div>
+            </div>
+            
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Crypto</a></li>
+                    <li><a href="#">AI</a></li>
+                    <li><a href="#">Business</a></li>
+                    <li><a href="#">Tech</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Breaking News Banner -->
+    <div class="breaking-news">
+        <div class="container">
+            <i class="fas fa-bolt"></i> BREAKING: <span>Crypto.com CEO Kris Marszalek acquires premium domain AI.com for a record $70 million</span> <i class="fas fa-bolt"></i>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="container">
+        <article>
+            <!-- Article Header -->
+            <div class="article-header">
+                <div class="category-tag">Exclusive Report</div>
+                <h1 class="article-title">Crypto.com CEO Buys AI.com For $70 Million In Historic Domain Purchase</h1>
+                
+                <div class="article-meta">
+                    <div class="meta-item">
+                        <div class="author-img">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div>
+                            <div style="font-weight: 600;">Michael Chen</div>
+                            <div>Senior Tech Correspondent</div>
+                        </div>
+                    </div>
+                    <div class="meta-item">
+                        <i class="far fa-calendar"></i>
+                        <span>August 15, 2023</span>
+                    </div>
+                    <div class="meta-item">
+                        <i class="far fa-clock"></i>
+                        <span>5 min read</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Featured Image -->
+            <div class="featured-image fade-in">
+                <div class="domain-display">
+                    <span class="ai">AI</span><span class="com">.com</span>
+                </div>
+                <div class="price-tag pulse">$70,000,000</div>
+                <p style="z-index: 2; margin-top: 20px; font-size: 1.2rem;">The most expensive domain purchase of 2023</p>
+            </div>
+
+            <!-- Article Content -->
+            <div class="article-content">
+                <div class="content-main">
+                    <p>In what industry experts are calling the most significant domain acquisition of the year, Crypto.com CEO Kris Marszalek has reportedly purchased the premium domain name <strong>AI.com</strong> for a staggering <strong>$70 million</strong>. This transaction represents one of the largest publicly disclosed domain sales in history and signals a major strategic move by the cryptocurrency exchange giant into the artificial intelligence space.</p>
+                    
+                    <p>The acquisition, confirmed by multiple sources close to the negotiations, underscores the escalating value of premium domain names in the age of digital transformation. AI.com, previously owned by an undisclosed technology investor, has long been considered one of the most valuable domain names on the internet, given the explosive growth of artificial intelligence technologies.</p>
+                    
+                    <div class="quote">
+                        "This isn't just a domain purchase—it's a statement of intent. Acquiring AI.com positions Crypto.com at the forefront of the two most transformative technologies of our time: cryptocurrency and artificial intelligence."
+                        <span class="quote-author">— Sarah Johnson, Domain Investment Analyst</span>
+                    </div>
+                    
+                    <h2>Strategic Implications</h2>
+                    <p>Industry analysts believe this move signals Crypto.com's ambition to expand beyond cryptocurrency trading and establish itself as a comprehensive technology platform. The acquisition of AI.com suggests plans to integrate advanced AI capabilities into their existing services, potentially including:</p>
+                    
+                    <div class="key-facts">
+                        <h3>Key Facts About The Deal</h3>
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i> <strong>Purchase Price:</strong> $70 million (cash and equity)</li>
+                            <li><i class="fas fa-check-circle"></i> <strong>Previous Owner:</strong> Undisclosed technology investor</li>
+                            <li><i class="fas fa-check-circle"></i> <strong>Domain Age:</strong> Registered since 1993</li>
+                            <li><i class="fas fa-check-circle"></i> <strong>Broker:</strong> Media Options (confirmed the sale)</li>
+                            <li><i class="fas fa-check-circle"></i> <strong>Timing:</strong> Deal finalized in early August 2023</li>
+                            <li><i class="fas fa-check-circle"></i> <strong>Ranking:</strong> 3rd largest publicly disclosed domain sale</li>
+                        </ul>
+                    </div>
+                    
+                    <p>According to domain industry experts, AI.com's value has skyrocketed in recent years alongside the AI boom. "Five years ago, this domain might have sold for $10-20 million," explained domain broker Andrew Miller. "But with ChatGPT's success and the AI gold rush, premium AI-related domains have become digital real estate of extraordinary value."</p>
+                    
+                    <h2>Market Reaction</h2>
+                    <p>The news has sent ripples through both the cryptocurrency and technology sectors. Crypto.com's native token, CRO, saw an immediate 8% price increase following rumors of the acquisition. Meanwhile, shares of AI-focused companies also experienced heightened trading volumes as investors speculate on potential partnerships or competitive responses.</p>
+                    
+                    <p>Marszalek, known for his aggressive marketing strategies including the $700 million naming rights deal for the Staples Center (now Crypto.com Arena), appears to be doubling down on brand visibility. The AI.com acquisition follows Crypto.com's recent expansion into payment solutions and NFT marketplaces, suggesting a broader diversification strategy.</p>
+                    
+                    <div class="impact-section">
+                        <div class="impact-card fade-in">
+                            <div class="impact-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <h3>Market Impact</h3>
+                            <p>Crypto.com's CRO token surged 8% on the news, adding over $500 million to market cap</p>
+                        </div>
+                        
+                        <div class="impact-card fade-in">
+                            <div class="impact-icon">
+                                <i class="fas fa-history"></i>
+                            </div>
+                            <h3>Historical Context</h3>
+                            <p>Third largest domain sale after Voice.com ($30M) and Cars.com ($872M in 2014)</p>
+                        </div>
+                        
+                        <div class="impact-card fade-in">
+                            <div class="impact-icon">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <h3>AI Domain Boom</h3>
+                            <p>AI-related domains have appreciated 300% on average since ChatGPT launch</p>
+                        </div>
+                    </div>
+                    
+                    <h2>Future Plans for AI.com</h2>
+                    <p>While Crypto.com has not officially announced specific plans for AI.com, sources indicate the domain will initially redirect to Crypto.com's main platform before launching a dedicated AI division later this year. Industry speculation suggests potential applications could include:</p>
+                    
+                    <p><strong>AI-Powered Trading:</strong> Advanced algorithms for cryptocurrency investment strategies.</p>
+                    <p><strong>Blockchain Analytics:</strong> AI tools for tracking transactions and detecting fraud.</p>
+                    <p><strong>Customer Service Bots:</strong> Enhanced AI chatbots for user support.</p>
+                    <p><strong>Predictive Analytics:</strong> Market trend forecasting using machine learning.</p>
+                    
+                    <p>The $70 million price tag, while eye-watering, represents just 1% of Crypto.com's estimated marketing budget over the next three years, according to company filings. This puts into perspective the scale of investment Marszalek is willing to make for strategic digital assets.</p>
+                    
+                    <div class="social-share">
+                        <div class="social-btn twitter">
+                            <i class="fab fa-twitter"></i>
+                        </div>
+                        <div class="social-btn facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </div>
+                        <div class="social-btn linkedin">
+                            <i class="fab fa-linkedin-in"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Side Content -->
+                <div class="side-content">
+                    <div class="side-card ceo-profile">
+                        <div class="ceo-img">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <div class="ceo-name">Kris Marszalek</div>
+                        <div class="ceo-title">CEO of Crypto.com</div>
+                        <p>Polish entrepreneur and founder of Crypto.com, known for aggressive marketing and billion-dollar domain acquisitions. Previously founded BEECRAZY and Ensogo.</p>
+                    </div>
+                    
+                    <div class="side-card">
+                        <h3>Related Articles</h3>
+                        <div class="related-article">
+                            <div class="related-img" style="background-color: rgba(0, 216, 255, 0.1); color: var(--crypto);">
+                                <i class="fas fa-coins"></i>
+                            </div>
+                            <div class="related-content">
+                                <h4>Crypto.com Secures Dubai License</h4>
+                                <p>Exchange expands Middle East operations with full regulatory approval.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="related-article">
+                            <div class="related-img" style="background-color: rgba(255, 107, 107, 0.1); color: var(--ai);">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <div class="related-content">
+                                <h4>AI Domain Sales Hit Record High</h4>
+                                <p>Premium AI domains appreciating faster than cryptocurrency assets.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="related-article">
+                            <div class="related-img" style="background-color: rgba(138, 43, 226, 0.1); color: var(--secondary);">
+                                <i class="fas fa-globe"></i>
+                            </div>
+                            <div class="related-content">
+                                <h4>Most Expensive Domains Ever Sold</h4>
+                                <p>From Cars.com to Voice.com - the billion-dollar domain market.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="side-card">
+                        <h3>Top Domain Sales</h3>
+                        <ol style="padding-left: 20px;">
+                            <li style="margin-bottom: 10px;"><strong>Cars.com</strong> - $872M (2014)</li>
+                            <li style="margin-bottom: 10px;"><strong>Voice.com</strong> - $30M (2019)</li>
+                            <li style="margin-bottom: 10px;"><strong>AI.com</strong> - $70M (2023)*</li>
+                            <li style="margin-bottom: 10px;"><strong>Insurance.com</strong> - $35.6M (2010)</li>
+                            <li><strong>VacationRentals.com</strong> - $35M (2007)</li>
+                        </ol>
+                        <p style="margin-top: 10px; font-size: 0.9rem; color: #666;">*Reported price, not officially confirmed</p>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Tech News</h3>
+                    <p style="color: #b0b7c3; margin-bottom: 20px;">Bringing you the latest in technology, cryptocurrency, AI, and innovation since 2015.</p>
+                    <div class="newsletter">
+                        <h4>Subscribe to our newsletter</h4>
+                        <input type="email" placeholder="Your email address">
+                        <button>Subscribe</button>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Categories</h3>
+                    <ul>
+                        <li><a href="#">Cryptocurrency</a></li>
+                        <li><a href="#">Artificial Intelligence</a></li>
+                        <li><a href="#">Blockchain</a></li>
+                        <li><a href="#">Startups</a></li>
+                        <li><a href="#">Gadgets</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Careers</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Follow Us</h3>
+                    <div style="display: flex; gap: 15px; margin-top: 10px;">
+                        <a href="#" style="color: white; font-size: 1.5rem;"><i class="fab fa-twitter"></i></a>
+                        <a href="#" style="color: white; font-size: 1.5rem;"><i class="fab fa-facebook"></i></a>
+                        <a href="#" style="color: white; font-size: 1.5rem;"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" style="color: white; font-size: 1.5rem;"><i class="fab fa-youtube"></i></a>
+                    </div>
+                    <p style="color: #b0b7c3; margin-top: 20px;">For tips or inquiries:<br>contact@technews.example.com</p>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 Tech News. All rights reserved.</p>
+                <p style="margin-top: 5px;">This is a fictional news article created for demonstration purposes. All information is speculative.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Animation on scroll
+        document.addEventListener('DOMContentLoaded', function() {
+            // Fade-in animation for elements
+            const fadeElements = document.querySelectorAll('.fade-in');
+            
+            const fadeObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.animation = 'fadeIn 0.8s ease forwards';
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            fadeElements.forEach(element => {
+                element.style.opacity = '0';
+                fadeObserver.observe(element);
+            });
+            
+            // Social share buttons interaction
+            document.querySelectorAll('.social-btn').forEach(button => {
+                button.addEventListener('click', function() {
+                    const platform = this.classList.contains('twitter') ? 'Twitter' : 
+                                   this.classList.contains('facebook') ? 'Facebook' : 'LinkedIn';
+                    
+                    alert(`Sharing this article on ${platform}...\n\n"BREAKING: Crypto.com CEO buys AI.com for $70 million in historic domain purchase"\n\nRead the full article at TechNews.com`);
+                });
+            });
+            
+            // Newsletter subscription
+            document.querySelector('.newsletter button').addEventListener('click', function() {
+                const emailInput = document.querySelector('.newsletter input');
+                if (emailInput.value && emailInput.value.includes('@')) {
+                    alert(`Thank you for subscribing to Tech News!\nA confirmation has been sent to ${emailInput.value}`);
+                    emailInput.value = '';
+                } else {
+                    alert('Please enter a valid email address.');
+                }
+            });
+            
+            // Price tag pulse effect
+            const priceTag = document.querySelector('.price-tag');
+            setInterval(() => {
+                priceTag.classList.toggle('pulse');
+            }, 4000);
+            
+            // Update "time ago" for the article
+            function updateTimeAgo() {
+                const now = new Date();
+                const articleDate = new Date(2023, 7, 15); // August 15, 2023
+                const diffMs = now - articleDate;
+                const diffHours = Math.floor(diffMs / (1000 * 60 * 60));
+                
+                let timeText = '';
+                if (diffHours < 1) {
+                    timeText = 'Just now';
+                } else if (diffHours < 24) {
+                    timeText = `${diffHours} hours ago`;
+                } else {
+                    const diffDays = Math.floor(diffHours / 24);
+                    timeText = `${diffDays} days ago`;
+                }
+                
+                // Update the time element if it exists
+                const timeElement = document.querySelector('.meta-item:nth-child(2) span');
+                if (timeElement) {
+                    timeElement.textContent = timeText;
+                }
+            }
+            
+            // Initialize time display
+            updateTimeAgo();
+        });
+    </script>
+</body>
+</html>
